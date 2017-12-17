@@ -1,0 +1,10 @@
+nginx:
+  image: nginx
+hello-flask:
+  build: .
+  ports:
+    - "2170:80"
+  links:
+    - redis
+redis:
+  image: redis
